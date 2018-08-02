@@ -19,7 +19,8 @@ namespace MultilenguajeMVCCore
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+            .UseContentRoot(Directory.GetCurrentDirectory())
+            .UseStartup<Startup>()
+            .Build();
     }
 }
