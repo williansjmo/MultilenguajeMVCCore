@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using MultilenguajeMVCCore.Services;
+using MultilenguajeMvcCore.Services;
 
-namespace MultilenguajeMVCCore.Services
+namespace MultilenguajeMvcCore.Services
 {
     public static class EmailSenderExtensions
     {

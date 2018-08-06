@@ -1,6 +1,6 @@
 using System;
 
-namespace MultilenguajeMVCCore.Models
+namespace MultilenguajeMvcCore.Models
 {
     public class ErrorViewModel
     {

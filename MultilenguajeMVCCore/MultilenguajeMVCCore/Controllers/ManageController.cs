@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using MultilenguajeMVCCore.Models;
-using MultilenguajeMVCCore.Models.ManageViewModels;
-using MultilenguajeMVCCore.Services;
+using MultilenguajeMvcCore.Models;
+using MultilenguajeMvcCore.Models.ManageViewModels;
+using MultilenguajeMvcCore.Services;
 
-namespace MultilenguajeMVCCore.Controllers
+namespace MultilenguajeMvcCore.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]
@@ -522,7 +522,7 @@ namespace MultilenguajeMVCCore.Controllers
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("MultilenguajeMVCCore"),
+                _urlEncoder.Encode("MultilenguajeMvcCore"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

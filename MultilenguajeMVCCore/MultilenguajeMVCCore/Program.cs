@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace MultilenguajeMVCCore
+namespace MultilenguajeMvcCore
 {
     public class Program
     {
@@ -19,8 +19,7 @@ namespace MultilenguajeMVCCore
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .UseContentRoot(Directory.GetCurrentDirectory())
-            .UseStartup<Startup>()
-            .Build();
+                .UseStartup<Startup>()
+                .Build();
     }
 }
