@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using MultilenguajeMvcCore.Data;
 using MultilenguajeMvcCore.Models;
 using MultilenguajeMvcCore.Services;
+using MultilenguajeMvcCore.Config;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace MultilenguajeMvcCore
 {
@@ -35,8 +37,10 @@ namespace MultilenguajeMvcCore
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
-
-            services.AddMvc();
+            LocalizationConfig.Configure(services);
+            services.AddMvc()
+                .AddDataAnnotationsLocalization()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +60,7 @@ namespace MultilenguajeMvcCore
             app.UseStaticFiles();
 
             app.UseAuthentication();
-
+            LocalizationConfig.Configure(app);
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
